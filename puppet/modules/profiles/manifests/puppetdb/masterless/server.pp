@@ -20,7 +20,7 @@ class profiles::puppetdb::masterless::server {
   include ::apache::mod::ssl
 
   apache::vhost { 'puppetdb_proxy':
-    servername => 'puppetdb.vagrant.colruytgroup.com',
+    servername => $::fqdn,
     docroot    => '/var/www/html/puppetdb',
     ssl        => true,
     port       => 8081,

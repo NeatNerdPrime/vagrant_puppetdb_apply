@@ -33,6 +33,6 @@ class profiles::puppetdb::masterless::client {
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => "[main]\n  server = puppetdb.vagrant.colruytgroup.com\n  port = 8081\n  soft_write_failure = true",
+    content => "[main]\n  server = puppetdb.${domain}\n  port = 8081\n  soft_write_failure = true",
   }
 }
