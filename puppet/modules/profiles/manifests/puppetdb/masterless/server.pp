@@ -38,10 +38,5 @@ class profiles::puppetdb::masterless::server {
     manage_firewall => false,
   }
 
-  # need to mange the following files after puppetdb installation
-  # - puppetdb.conf client
-  # - puppet.conf client
-  # - routes.yaml server/client ??
-  # - jetty.ini (server)
 }
 
