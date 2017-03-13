@@ -49,13 +49,13 @@ Tips
 From the client, one can query puppetdb using following command :
 
 ```
-curl -X GET --insecure "Accept: application/json" 'https://puppetdb.koewacht.net:8081/pdb/query/v4/resources' --data-urlencode 'query=["=","exported", true]'
+curl -X GET --insecure -H "Accept: application/json" 'https://puppetdb.koewacht.net:8081/pdb/query/v4/resources' --data-urlencode 'query=["=","exported", true]'
 ```
 
 On the pupeptdb, one can use the plain https port.
 
 ```
-curl -X GET "Accept: application/json" 'http://localhost:8080/pdb/query/v4/resources' --data-urlencode 'query=["=","exported", true]'
+curl -X GET -H "Accept: application/json" 'http://localhost:8080/pdb/query/v4/resources' --data-urlencode 'query=["=","exported", true]'
 ```
 
 Issues etc ?
@@ -65,11 +65,3 @@ Any ideas, remarks may be filed as an issue.
 And af course, PR's are welcome.
 
 I hope someone does find this usefull one way are another.
-
-
-
-
-
-
-
-
